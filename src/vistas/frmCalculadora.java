@@ -44,6 +44,8 @@ public class frmCalculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora hecha por Jhocem oSCo");
+        setBackground(new java.awt.Color(255, 255, 0));
+        setUndecorated(true);
 
         btnSiete.setText("7");
         btnSiete.addActionListener(new java.awt.event.ActionListener() {
@@ -193,6 +195,11 @@ public class frmCalculadora extends javax.swing.JFrame {
 
         txtOperacion.setEditable(false);
         txtOperacion.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtOperacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtOperacionActionPerformed(evt);
+            }
+        });
 
         btnAproximar.setText("Aproximar");
         btnAproximar.setToolTipText("Permite reducir la cantidad de decimales a un valor aproximado");
@@ -241,7 +248,7 @@ public class frmCalculadora extends javax.swing.JFrame {
                                 .addComponent(btnOcho, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnNueve, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -299,7 +306,7 @@ public class frmCalculadora extends javax.swing.JFrame {
                             .addComponent(btnCero, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnPunto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(75, 75, 75))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -576,6 +583,10 @@ public class frmCalculadora extends javax.swing.JFrame {
         aproximarDecimales(dblResultado);
         txtOperacion.setText("" + dblResultado);
     }//GEN-LAST:event_btnAproximarActionPerformed
+
+    private void txtOperacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtOperacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtOperacionActionPerformed
 
     //Método para inicializar las Variables 
     private void Limpiar() {
